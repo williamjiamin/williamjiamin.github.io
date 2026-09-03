@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="SimpleMath gives children ages 6–8 a calm, visual way to build lasting math confidence.">
+  <title>SimpleMath — Kids Math</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #14281d;
+      background: #f7fbf2;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    a { color: inherit; }
+    .page { overflow: hidden; }
+    header, main, footer { max-width: 1100px; margin: 0 auto; padding-inline: 24px; }
+    header {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      min-height: 82px;
+    }
+    .brand { color: #176c2a; font-size: 1.2rem; font-weight: 850; letter-spacing: -.02em; text-decoration: none; }
+    .legal { display: flex; flex-wrap: wrap; gap: 18px; }
+    .legal a { color: #376144; font-size: .92rem; font-weight: 700; text-decoration: none; }
+    .hero {
+      background:
+        radial-gradient(circle at 80% 15%, #ffe993 0, #ffe993 11%, transparent 12%),
+        radial-gradient(circle at 75% 79%, #a5e7bc 0, #a5e7bc 11%, transparent 12%),
+        linear-gradient(133deg, #e5f8e9 0%, #f9f5d6 100%);
+      border: 1px solid #d8ecd7;
+      border-radius: 32px;
+      display: grid;
+      gap: 44px;
+      grid-template-columns: minmax(0, 1.1fr) minmax(290px, .9fr);
+      margin: 18px auto 78px;
+      max-width: 1052px;
+      padding: clamp(34px, 6vw, 72px);
+    }
+    .eyebrow { color: #278340; font-size: .82rem; font-weight: 850; letter-spacing: .12em; text-transform: uppercase; }
+    h1 { font-size: clamp(2.7rem, 6vw, 5.1rem); letter-spacing: -.065em; line-height: .96; margin: 14px 0 22px; }
+    h2 { font-size: clamp(1.85rem, 3.5vw, 2.65rem); letter-spacing: -.04em; line-height: 1.04; margin: 0; }
+    h3 { font-size: 1.08rem; margin: 0 0 8px; }
+    p { color: #365140; font-size: 1.07rem; line-height: 1.65; margin: 0; }
+    .hero p { max-width: 570px; }
+    .pill { background: #fffdf0; border: 1px solid #e7d984; border-radius: 999px; display: inline-block; font-size: .9rem; font-weight: 800; margin-top: 28px; padding: 10px 14px; }
+    .math-card { align-self: center; background: #fff; border: 1px solid #d8ecd7; border-radius: 24px; box-shadow: 0 19px 42px rgba(43, 108, 54, .13); padding: 25px; transform: rotate(2deg); }
+    .math-card > p { color: #7b7451; font-size: .88rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+    .equation { align-items: center; color: #176c2a; display: flex; font-size: clamp(2rem, 5vw, 3.7rem); font-weight: 850; gap: 14px; justify-content: center; letter-spacing: -.06em; margin: 28px 0; }
+    .dots { color: #f5b91b; font-size: 1.5rem; letter-spacing: 4px; text-align: center; }
+    .section { margin: 0 auto 82px; max-width: 1052px; padding-inline: 24px; }
+    .intro { display: grid; gap: 22px; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); margin-bottom: 30px; }
+    .grid { display: grid; gap: 16px; grid-template-columns: repeat(3, 1fr); }
+    .feature { background: #fff; border: 1px solid #e1eddf; border-radius: 18px; min-height: 182px; padding: 24px; }
+    .icon { align-items: center; background: #e5f8e9; border-radius: 13px; color: #21853b; display: flex; font-size: 1.35rem; height: 42px; justify-content: center; margin-bottom: 22px; width: 42px; }
+    .parent { background: #173e25; border-radius: 28px; color: #fff; display: grid; gap: 26px; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); padding: clamp(30px, 5vw, 58px); }
+    .parent h2 { max-width: 440px; }
+    .parent p { color: #d9ebdb; }
+    .parent-note { align-self: center; border-left: 3px solid #f7d866; color: #fff7bd; font-size: 1rem; font-weight: 750; line-height: 1.55; padding-left: 18px; }
+    .promise { background: #eff9ef; border: 1px solid #d8ecd7; border-radius: 20px; margin-top: 18px; padding: 28px; }
+    .promise p { color: #1f6534; font-weight: 650; }
+    footer { border-top: 1px solid #deebdf; color: #607764; display: flex; flex-wrap: wrap; font-size: .9rem; gap: 16px; justify-content: space-between; padding-block: 28px 38px; }
+    footer a { color: #2f6f3c; font-weight: 750; text-decoration: none; }
+    @media (max-width: 720px) {
+      header { align-items: flex-start; flex-direction: column; gap: 14px; padding-block: 22px; }
+      .hero, .intro, .parent { grid-template-columns: 1fr; }
+      .grid { grid-template-columns: 1fr; }
+      .math-card { max-width: 370px; transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <a class="brand" href="index.html">SimpleMath</a>
+      <nav class="legal" aria-label="Legal and support links">
+        <a href="support.html">Support</a>
+        <a href="privacy-policy.html">Privacy</a>
+        <a href="terms-of-use.html">Terms</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div>
+          <div class="eyebrow">Math for ages 6–8</div>
+          <h1 id="hero-title">Little steps.<br>Real math confidence.</h1>
+          <p>SimpleMath turns early math into a calm, visual learning journey. Children explore ideas, practise in small moments, and build confidence one clear step at a time.</p>
+          <div class="pill">No ads · No accounts · No tracking</div>
+        </div>
+        <div class="math-card" aria-label="A simple visual math example">
+          <p>See the idea</p>
+          <div class="equation"><span>4</span><span>+</span><span>3</span><span>=</span><span>7</span></div>
+          <div class="dots" aria-hidden="true">● ● ● ● &nbsp; + &nbsp; ● ● ●</div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="learn-title">
+        <div class="intro">
+          <h2 id="learn-title">Built for how children learn.</h2>
+          <p>Every activity begins with an idea children can see. Short practice rounds, gentle review, daily challenges, and collectible rewards keep learning focused and encouraging.</p>
+        </div>
+        <div class="grid">
+          <article class="feature"><div class="icon" aria-hidden="true">✦</div><h3>Visual first</h3><p>Clear models make numbers, shapes, fractions, time, and measurement easier to understand.</p></article>
+          <article class="feature"><div class="icon" aria-hidden="true">✓</div><h3>Practice that feels kind</h3><p>Small rounds and gentle review help children return to ideas without pressure.</p></article>
+          <article class="feature"><div class="icon" aria-hidden="true">⌁</div><h3>Learn in two languages</h3><p>Families can switch between English and Chinese learning support at any time.</p></article>
+        </div>
+      </section>
+
+      <section class="section parent" aria-labelledby="parent-title">
+        <div>
+          <div class="eyebrow" style="color:#f7d866">Designed for families</div>
+          <h2 id="parent-title">Premium stays behind a parent gate.</h2>
+        </div>
+        <div>
+          <p>SimpleMath offers optional Premium access to every learning world and future content. Purchase options only appear after an in-app adult math check.</p>
+          <p class="parent-note">Children never see a price or purchase button before the parent gate.</p>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="promise-title">
+        <div class="intro">
+          <h2 id="promise-title">A private place to learn.</h2>
+          <p>Learning progress stays on the device. SimpleMath does not use advertising, analytics, tracking, chat, social features, or user accounts.</p>
+        </div>
+        <div class="promise"><p>Questions from families? Visit <a href="support.html">SimpleMath Support</a>. Read our <a href="privacy-policy.html">Privacy Policy</a> and <a href="terms-of-use.html">Terms of Use</a>.</p></div>
+      </section>
+    </main>
+
+    <footer>
+      <span>© 2026 LIPAI WANG · SimpleMath</span>
+      <span><a href="support.html">Support</a> · <a href="privacy-policy.html">Privacy</a> · <a href="terms-of-use.html">Terms</a></span>
+    </footer>
+  </div>
+</body>
+</html>
