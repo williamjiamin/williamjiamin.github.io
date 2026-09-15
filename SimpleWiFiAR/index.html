@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WiFi AR — Support</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+         max-width: 42rem; margin: 0 auto; padding: 2.5rem 1.25rem; }
+  h1 { font-size: 1.9rem; margin-bottom: .25rem; }
+  h2 { font-size: 1.15rem; margin-top: 2rem; }
+  .tag { opacity: .65; font-size: .95rem; margin-top: 0; }
+  dt { font-weight: 600; margin-top: 1rem; }
+  dd { margin: .25rem 0 0 0; }
+</style>
+</head>
+<body>
+
+<h1>WiFi AR</h1>
+<p class="tag">Find the room where your Wi-Fi dies: an AR scan, a coverage map, every room scored, and a report you can send.</p>
+
+<h2>Support</h2>
+<p>Found a bug or have a request? Please
+<a href="https://github.com/williamjiamin/SimpleWiFiAR/issues">open an issue on GitHub</a>
+and include your iPhone model and iOS version. Issues are read and answered.</p>
+
+<h2>Privacy</h2>
+<p>WiFi AR collects no data at all. Read the full
+<a href="./privacy.html">privacy policy</a>.</p>
+
+<h2>Frequently asked</h2>
+<dl>
+  <dt>Why doesn't it show Wi-Fi signal strength in dBm?</dt>
+  <dd>iOS does not let third-party apps read Wi-Fi radio signal strength — that API is
+      reserved by Apple. So the Wi-Fi readings in this app measure real
+      <em>connection quality</em> (latency, jitter, and packet loss to the network)
+      rather than raw radio strength. Bluetooth is different: those readings are true
+      device signal strength (RSSI).</dd>
+
+  <dt>The AR view is blank or won't start.</dt>
+  <dd>AR needs camera permission and a reasonably lit, textured space to lock onto —
+      blank walls and dark rooms are hard to track. Check
+      Settings › WiFi AR › Camera, then move the phone slowly around the room.</dd>
+
+  <dt>No Bluetooth devices appear.</dt>
+  <dd>Check Settings › WiFi AR › Bluetooth is allowed, and that Bluetooth is on in
+      Control Center. Only devices that are actively advertising are discoverable —
+      headphones already connected to another phone often won't show up until they're
+      put back into pairing mode.</dd>
+
+  <dt>How do I align an imported floor plan?</dt>
+  <dd>Open Coverage › Map, tap <strong>Set position</strong>, stand somewhere easy to find
+      and tap that spot on the plan, then walk a few metres to a second spot and tap it too.
+      Scan must be running so the phone knows where it is. After that, readings land on the
+      plan and rooms get scored automatically.</dd>
+
+  <dt>Where is the LiDAR room scan?</dt>
+  <dd>The <strong>Scan room</strong> button appears on the Map only on iPhones with a LiDAR
+      scanner (Pro models). On other iPhones, import a floor plan or draw rooms on the map.</dd>
+
+  <dt>What does Pro include?</dt>
+  <dd>Pro is a single one-time purchase, never a subscription. It unlocks PDF and CSV survey
+      reports, floor-plan import, unlimited saved scans, three premium AR themes, and
+      speed-test history. Everything else is free.</dd>
+
+  <dt>I bought Pro and it's not unlocked.</dt>
+  <dd>Open Settings inside the app and tap <strong>Restore Purchases</strong>, making sure
+      you're signed in with the same Apple Account you bought it with.</dd>
+
+  <dt>How do I delete my data?</dt>
+  <dd>Settings › Clear All Data inside the app removes every reading, and Reset rooms &amp;
+      floor plan removes rooms and any imported plan. Deleting the app removes everything.</dd>
+</dl>
+
+</body>
+</html>
